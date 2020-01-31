@@ -9,20 +9,14 @@ function calculateTip() {
     const peapleNum = document.getElementById("peapleNumber").value;
 
     // the validation input in the 3 fildes
-    if( billAmount === "" || theQuality == 0 ){
-        alert("this is wrong....  please check your values");
+    if( isNaN(billAmount) || theQuality == 0 ){
+        document.getElementById("finalCalc").innerHTML = "this feilds accepts number only";
     };
 
-    if( peapleNum <= 0 ){  
-
-        alert("the Minimum number in the peaple are share with is '1' ");
-        
-        document.getElementById("finalCalc").style.display = "none";
-
-        document.getElementById("results").style.display = "none";
+    if( isNaN(peapleNum) || peapleNum <= 0 ){  
+        document.getElementById("finalCalc").innerHTML = "this feilds accepts number only";
 
     }else{
-
         peapleNum == 1;
     
         document.getElementById("finalCalc").style.display = "block";

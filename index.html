@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Tip Calculator</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/normalize.css">
+</head>
+<body>
+    <div class="container">
+        <header class="head">
+            <h2>Tip Calculator</h2>
+        </header>
+
+        <!--start the bills-->
+        <section class="form">    
+            <h4 class="bills">how much was your bill ?</h4>
+            <input id="billNumber" value="" placeholder="type the bill amount">
+            <span class="dollar">$</span>
+        <!--end the bills-->
+
+        <!--start the options-->
+            <h4 class="number">how was your service ?</h4>
+            <select id="Quality">
+                <option value="0" disabled selected> -- Choose an option -- </option>
+                <option value="5">Terrible - 5%</option>
+                <option value="10">Bad - 10%</option>
+                <option value="15">OK - 15%</option>
+                <option value="20">Good - 20%</option>
+                <option value="30">Outstanding - 30%</option>
+            </select>
+        <!--end the options-->
+
+        <!--start the peapleNumber -->    
+            <h4>how many peaple are sharing the bill ?</h4>
+            <input id="peapleNumber" value="" placeholder="type the peaple number">
+            <span class="peaple">peaple</span>
+            <button id="total">Calculate</button>
+        <!--end the peapleNumber-->
+
+            <p id="finalCalc" style="display: none;">
+                Tip amount
+                <span id="results"></span>
+             for eash</p>
+        </section>        
+    </div>
+    <script src="js/code.js"></script>
+</body>
+</html>
